@@ -89,6 +89,7 @@
             flag2 = false
             document.querySelector(".header").style.cssText = " background: #1C1C1C;"
             e.target.src = './images/close.svg'
+            e.target.style.cssText = "transform: rotate(360deg)"
             setTimeout(()=>{
                 var texts = document.querySelectorAll(".text-menu-animation span")
                 texts.forEach((val)=>{
@@ -98,6 +99,7 @@
                         "        -o-transform: translateY(0px);\n" +
                         "        transform: translateY(0px);"
                 })
+                e.target.style.cssText = ""
 
             },500)
 
@@ -112,12 +114,15 @@
                     "        -o-transform: translateY(-100px);\n" +
                     "        transform: translateY(-100px);"
             })
+            e.target.src = './images/menu_mobile.svg'
+            e.target.style.cssText = "transform: rotate(360deg)"
             setTimeout(()=>{
                 document.querySelector(".header").style.cssText = ""
                 document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
                 flag2 = true
+                e.target.style.cssText = ""
             },1000)
-            e.target.src = './images/menu_mobile.svg'
+
 
         }
     })
