@@ -91,6 +91,7 @@ html {
 }
 
 .text-menu {
+    position: relative;
     font-family: "EB Garamond";
     font-style: normal;
     font-weight: normal;
@@ -100,8 +101,30 @@ html {
     color: var(--text-color);
     text-decoration: none;
     margin-left: 1.53rem;
+    transition: clip-path 275ms ease;
 }
+.text-menu-animation {
+    position: relative;
+    transition: clip-path 275ms ease;
+}
+.text-menu-animation:hover span::before, .text-menu-animation:focus span::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.text-menu-animation span {
+    position: relative;
+    display: inline-block;
+    }
 
+.text-menu-animation span::before {
+    position: absolute;
+    content: attr(data-text);
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--text-color);
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: clip-path 275ms ease;
+    opacity: 0.7;
+}
 
 
 .header {
@@ -129,7 +152,7 @@ html {
     border-bottom: 1px solid var(--text-color);
 }
 .padding {
-    margin: 0 0.5rem;
+    margin: 0 0.5rem 0 1rem;
 }
 /* MAIN */
 .top-video{
@@ -170,19 +193,46 @@ html {
     .container {
         max-width: 1280px;
     }
+    .logo {
+        max-width: 265px;
+    }
 }
 
 @media (max-width: 1280px) {
     .container {
         max-width: 1024px;
+        padding:0 15px;
     }
     html{
         font-size:18px;
     }
+    .logo {
+        max-width: 203px;
+    }
 
+}
+@media (max-width: 1024px) {
+    .container {
+        max-width: 920px;
+    }
+    .footer-text{
+        font-size:14px;
+    }
+    .h1{font-size:28px;}
+    .h2{font-size:26px;}
+    .section-name{font-size:18px;}
+    .text-menu-footer{
+        font-size: 1rem;
+    }
+    .text-menu,.language-switcher{
+        font-size: 1rem;
+    }
 }
 
 @media(max-width: 768px){
+    .logo {
+        max-width: 136px;
+    }
     .footer-text{
         font-size:14px;
     }
