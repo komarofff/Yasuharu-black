@@ -82,6 +82,9 @@ html {
     flex-wrap: nowrap;
     align-items: center;
 }
+.bold{
+    font-weight: bold;
+}
 /* HEADER */
 .logo {
     max-width: 365px;
@@ -96,7 +99,7 @@ html {
     letter-spacing: 0.05em;
     color: var(--text-color);
     text-decoration: none;
-    margin-right: 1.53rem;
+    margin-left: 1.53rem;
 }
 
 
@@ -148,7 +151,15 @@ html {
     letter-spacing: 0.05em;
     color: var(--text-color);
 }
-
+.text-menu-footer{
+    font-family: "EB Garamond";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+}
 @media (min-width: 2000px) {
     .container {
         max-width: 1920px;
@@ -164,5 +175,21 @@ html {
 @media (max-width: 1280px) {
     .container {
         max-width: 1024px;
+    }
+    html{
+        font-size:18px;
+    }
+
+}
+
+@media(max-width: 768px){
+    .footer-text{
+        font-size:14px;
+    }
+    .h1{font-size:28px;}
+    .h2{font-size:26px;}
+    .section-name{font-size:18px;}
+    .text-menu-footer{
+        font-size: 1rem;
     }
 }
