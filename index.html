@@ -50,13 +50,13 @@
         <p>© 2021 Blackship Realty Inc.</p>
         <nav class="flex-row">
             <ul class="flex-row">
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="About Us">About Us</span></a>
+                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="About Us">About Us</span></a>
                 </li>
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="Advantages">Advantages</span></a>
+                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Advantages">Advantages</span></a>
                 </li>
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="Contact Us">Contact Us</span></a>
+                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Contact Us">Contact Us</span></a>
                 </li>
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="Location">Location</span></a>
+                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Location">Location</span></a>
                 </li>
             </ul>
         </nav>
@@ -91,7 +91,7 @@
             e.target.src = './images/close.svg'
             e.target.style.cssText = "transform: rotate(360deg)"
             setTimeout(()=>{
-                var texts = document.querySelectorAll(".text-menu-animation span")
+                var texts = document.querySelectorAll(".text-menu > span")
                 texts.forEach((val)=>{
                     val.style.cssText = "-webkit-transform: translateY(0px);\n" +
                         "        -moz-transform: translateY(0px);\n" +
@@ -106,7 +106,7 @@
 
         }else{
 
-           var texts = document.querySelectorAll(".text-menu-animation span")
+           var texts = document.querySelectorAll(".text-menu > span")
             texts.forEach((val)=>{
                 val.style.cssText = "-webkit-transform: translateY(-100px);\n" +
                     "        -moz-transform: translateY(-100px);\n" +
@@ -127,7 +127,7 @@
         }
     })
     window.addEventListener('resize',()=>{
-        var texts = document.querySelectorAll(".text-menu-animation span")
+        var texts = document.querySelectorAll(".text-menu> span")
         if(document.documentElement.clientWidth>768) {
 
             texts.forEach((val) => {

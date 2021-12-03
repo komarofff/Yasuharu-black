@@ -230,7 +230,17 @@ html {
     color: var(--text-color);
 }
 
+/*.text-menu-footer {*/
+/*    font-family: "EB Garamond";*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 1rem;*/
+/*    line-height: 140%;*/
+/*    letter-spacing: 0.05em;*/
+/*    color: var(--text-color);*/
+/*}*/
 .text-menu-footer {
+    position: relative;
     font-family: "EB Garamond";
     font-style: normal;
     font-weight: normal;
@@ -238,8 +248,10 @@ html {
     line-height: 140%;
     letter-spacing: 0.05em;
     color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1.53rem;
+    transition: clip-path 275ms ease;
 }
-
 .hidden {
     display: none;
 }
@@ -406,7 +418,7 @@ html {
         padding: 25px 10px;
         border-bottom: 1px solid #fff;
     }
-    .text-menu-animation span{
+    .text-menu span{
         -webkit-transform: translateY(-100px);
         -moz-transform: translateY(-100px);
         -ms-transform:translateY(-100px) ;
@@ -421,6 +433,13 @@ html {
 
     }
 
+    a.text-menu-footer.text-menu-animation span{
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform:translateY(0px) ;
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+    }
 
 
 }
