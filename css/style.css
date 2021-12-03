@@ -356,11 +356,11 @@ html {
         align-items: flex-start;
         position: fixed;
         top: 78px;
-        -webkit-transform: translateX(-100vw);
-        -moz-transform: translateX(-100vw);
-        -ms-transform:translateX(-100vw) ;
-        -o-transform: translateX(-100vw);
-        transform: translateX(-100vw);
+        -webkit-transform: translateX(-110vw);
+        -moz-transform: translateX(-110vw);
+        -ms-transform:translateX(-110vw) ;
+        -o-transform: translateX(-110vw);
+        transform: translateX(-110vw);
         background: #1C1C1C;
         width: 100vw;
         height: 98vh;
@@ -371,7 +371,19 @@ html {
         -o-transition:all .3s ease-in-out;
         transition:all .3s ease-in-out;
     }
+    .mobile-menu-show{
+        -webkit-transform: translateX(-9vw);
+        -moz-transform: translateX(-9vw);
+        -ms-transform:translateX(-9vw) ;
+        -o-transform: translateX(-9vw);
+        transform: translateX(-9vw);
 
+        -webkit-transition:all .3s ease-in-out;
+        -moz-transition:all .3s ease-in-out;
+        -ms-transition:all .3s ease-in-out;
+        -o-transition:all .3s ease-in-out;
+        transition:all .3s ease-in-out;
+    }
     .mobile-menu  .text-menu {
         font-size: 34px !important;
 

@@ -65,6 +65,7 @@
 </footer>
 
 <script>
+    // video
     document.addEventListener('DOMContentLoaded', () => {
         let flag = true
         const video = document.getElementById('video')
@@ -80,8 +81,22 @@
         video.addEventListener('ended', () => {
             video.currentTime = 0;
         })
+    })
+    // mobile-menu
+    let flag2 =  true
+    document.querySelector(".mobile-menu-switcher").addEventListener('click',(e)=>{
+        if(flag2===true) {
+            document.querySelector(".mobile-menu").classList.add('mobile-menu-show')
+            flag2 = false
+            document.querySelector(".header").style.cssText = " background: #1C1C1C;"
+            e.target.src = './images/close.svg'
 
-
+        }else{
+            document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
+            flag2 = true
+            document.querySelector(".header").style.cssText = ""
+            e.target.src = './images/menu_mobile.svg'
+        }
     })
 
 </script>
