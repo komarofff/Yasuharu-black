@@ -13,7 +13,6 @@
     <div class="container flex-row-between">
         <img class="logo" src="./images/logo.svg" alt="logo">
         <nav class="flex-row">
-<!--            mobile-menu-->
             <ul class="flex-row mobile-menu">
                 <li><a class="text-menu text-menu-animation" href="#"><span data-text="About Us">About Us</span></a>
                 </li>
@@ -90,12 +89,36 @@
             flag2 = false
             document.querySelector(".header").style.cssText = " background: #1C1C1C;"
             e.target.src = './images/close.svg'
+            setTimeout(()=>{
+                var texts = document.querySelectorAll(".text-menu-animation span")
+                texts.forEach((val)=>{
+                    val.style.cssText = "-webkit-transform: translateY(0px);\n" +
+                        "        -moz-transform: translateY(0px);\n" +
+                        "        -ms-transform:translateY(0px) ;\n" +
+                        "        -o-transform: translateY(0px);\n" +
+                        "        transform: translateY(0px);"
+                })
+
+            },500)
+
 
         }else{
-            document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
-            flag2 = true
-            document.querySelector(".header").style.cssText = ""
+
+           var texts = document.querySelectorAll(".text-menu-animation span")
+            texts.forEach((val)=>{
+                val.style.cssText = "-webkit-transform: translateY(-100px);\n" +
+                    "        -moz-transform: translateY(-100px);\n" +
+                    "        -ms-transform:translateY(-100px) ;\n" +
+                    "        -o-transform: translateY(-100px);\n" +
+                    "        transform: translateY(-100px);"
+            })
+            setTimeout(()=>{
+                document.querySelector(".header").style.cssText = ""
+                document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
+                flag2 = true
+            },1000)
             e.target.src = './images/menu_mobile.svg'
+
         }
     })
 
