@@ -14,35 +14,68 @@
         <img class="logo" src="./images/logo.svg" alt="logo">
         <nav class="flex-row">
             <ul class="flex-row">
-                <li><a class="text-menu text-menu-animation" href="#"><span data-text="About Us">About Us</span></a></li>
-                <li><a class="text-menu text-menu-animation" href="#" ><span data-text="Advantages">Advantages</span></a></li>
-                <li><a class="text-menu text-menu-animation" href="#" ><span data-text="Contact Us">Contact Us</span></a></li>
-                <li><a class="text-menu text-menu-animation" href="#" ><span data-text="Location">Location</span></a></li>
+                <li><a class="text-menu text-menu-animation" href="#"><span data-text="About Us">About Us</span></a>
+                </li>
+                <li><a class="text-menu text-menu-animation" href="#"><span data-text="Advantages">Advantages</span></a>
+                </li>
+                <li><a class="text-menu text-menu-animation" href="#"><span data-text="Contact Us">Contact Us</span></a>
+                </li>
+                <li><a class="text-menu text-menu-animation" href="#"><span data-text="Location">Location</span></a>
+                </li>
             </ul>
-            <p class="flex-row "><span class="padding language-switcher active-switcher" >EN</span><span
-                    class=" language-switcher" >JPN</span></p>
+            <p class="flex-row "><span class="padding language-switcher active-switcher">EN</span><span
+                    class=" language-switcher">JPN</span></p>
         </nav>
     </div>
 
 </header>
 <main>
-<section class="top-video" >
-<!--    <img src="./images/top-video.jpg" alt="">-->
-</section>
+    <section class="top-video-block">
+        <div class="in" id="startVideo"></div>
+        <!--        <video class="top-video" id="video" poster="images/top-video.png" controls> -->
+        <video class="top-video" id="video">
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+    </section>
 </main>
 <footer class="footer footer-text">
     <div class="container flex-row-between">
         <p>© 2021 Blackship Realty Inc.</p>
         <nav class="flex-row">
             <ul class="flex-row">
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="About Us">About Us</span></a></li>
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#" ><span data-text="Advantages">Advantages</span></a></li>
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#" ><span data-text="Contact Us">Contact Us</span></a></li>
-                <li><a class="text-menu-footer text-menu-animation text-menu" href="#" ><span data-text="Location">Location</span></a></li>
+                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="About Us">About Us</span></a>
+                </li>
+                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="Advantages">Advantages</span></a>
+                </li>
+                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="Contact Us">Contact Us</span></a>
+                </li>
+                <li><a class="text-menu-footer text-menu-animation text-menu" href="#"><span data-text="Location">Location</span></a>
+                </li>
             </ul>
         </nav>
     </div>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let flag = true
+        const video = document.getElementById('video')
+        document.getElementById('startVideo').addEventListener('click', () => {
+            if (flag === true) {
+                video.play()
+                flag = false
+            } else {
+                video.pause()
+                flag = true
+            }
+        })
+        video.addEventListener('ended', () => {
+            video.currentTime = 0;
+        })
+
+
+    })
+
+</script>
 </body>
 </html>
