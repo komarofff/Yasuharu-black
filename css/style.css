@@ -366,7 +366,9 @@ html {
         padding-top: 24px;
         order: 3;
         border-top: 1px solid #fff;
-        width: 100%;
+        min-width: 100vw;
+        margin-left: -15px;
+        padding-left: 15px;
     }
     .footer-flex-row-between,.footer-flex-row{
         flex-direction: column;
@@ -487,7 +489,16 @@ html {
         transform: translateY(0px);
     }
 
-
+    .container-768{
+        margin:0 0 ;
+        width: 100vw;
+        padding: 0 15px;
+    }
+    .stripe{
+        width: 100vw;
+        height:1px;
+        background: #fff;
+    }
 }
 
 @media (max-width: 500px) {
