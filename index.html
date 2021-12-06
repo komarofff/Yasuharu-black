@@ -139,13 +139,16 @@
                 document.querySelector(".header").style.cssText = ""
                 flag2 = true
                 e.target.style.cssText = ""
-                document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
+                document.querySelector(".mobile-menu").style.cssText = "  -webkit-transform: translateY(-113vh);\n" +
+                    "        -moz-transform: translateY(-113vh);\n" +
+                    "        -ms-transform:translateY(-113vh) ;\n" +
+                    "        -o-transform: translateY(-113vh);\n" +
+                    "        transform: translateY(-113vh);"
+                setTimeout(()=>{
+                    document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
+                    document.querySelector(".mobile-menu").style.cssText = ""
+                },1500)
             }, 1000)
-
-
-
-
-
 
         }
     })
