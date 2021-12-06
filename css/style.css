@@ -356,6 +356,24 @@ html {
 }
 
 @media (max-width: 768px) {
+    nav.mobile-menu.mobile-menu-show >.flex-row {
+        flex-direction: column;
+        width: 100%;
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+    p.flex-row.col {
+        flex-direction: row !important;
+        align-items: flex-start;
+        padding: 25px 0;
+    }
+    .flex-row.hidden.row {
+        flex-direction: row !important;
+        padding: 10vw 15px 0 15px;
+    }
+    .flex-row.hidden.row img {
+        margin-right: 20px;
+    }
     .text-menu-footer{
         margin-left:0;
     }
@@ -458,6 +476,7 @@ html {
     }
     .mobile-menu  .text-menu {
         font-size: 34px !important;
+        margin-left:0;
     }
     .mobile-menu li{
         overflow: hidden;
