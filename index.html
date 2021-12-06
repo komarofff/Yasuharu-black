@@ -46,20 +46,29 @@
     </section>
 </main>
 <footer class="footer footer-text">
-    <div class="container flex-row-between">
-        <p>© 2021 Blackship Realty Inc.</p>
-        <nav class="flex-row">
-            <ul class="flex-row">
-                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="About Us">About Us</span></a>
-                </li>
-                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Advantages">Advantages</span></a>
-                </li>
-                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Contact Us">Contact Us</span></a>
-                </li>
-                <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Location">Location</span></a>
-                </li>
-            </ul>
-        </nav>
+    <div class="container footer-flex-row-between">
+        <p class="order3">© 2021 Blackship Realty Inc.</p>
+        <div class="footer-flex-row2">
+            <nav>
+                <ul class="footer-flex-row">
+                    <li><a class="text-menu-footer text-menu-animation " href="#"><span
+                            data-text="About Us">About Us</span></a>
+                    </li>
+                    <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Advantages">Advantages</span></a>
+                    </li>
+                    <li><a class="text-menu-footer text-menu-animation " href="#"><span data-text="Contact Us">Contact Us</span></a>
+                    </li>
+                    <li><a class="text-menu-footer text-menu-animation " href="#"><span
+                            data-text="Location">Location</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex-col hidden">
+                <a href="#"><img src="./images/linkedin.svg" alt=""></a>
+                <a href="#"><img src="./images/facebook.svg" alt=""></a>
+                <a href="#"><img src="./images/instagram.svg" alt=""></a>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -82,17 +91,17 @@
         })
     })
     // mobile-menu
-    let flag2 =  true
-    document.querySelector(".mobile-menu-switcher").addEventListener('click',(e)=>{
-        if(flag2===true) {
+    let flag2 = true
+    document.querySelector(".mobile-menu-switcher").addEventListener('click', (e) => {
+        if (flag2 === true) {
             document.querySelector(".mobile-menu").classList.add('mobile-menu-show')
             flag2 = false
             document.querySelector(".header").style.cssText = " background: #1C1C1C;"
             e.target.src = './images/close.svg'
             e.target.style.cssText = "transform: rotate(360deg)"
-            setTimeout(()=>{
+            setTimeout(() => {
                 var texts = document.querySelectorAll(".text-menu > span")
-                texts.forEach((val)=>{
+                texts.forEach((val) => {
                     val.style.cssText = "-webkit-transform: translateY(0px);\n" +
                         "        -moz-transform: translateY(0px);\n" +
                         "        -ms-transform:translateY(0px) ;\n" +
@@ -101,13 +110,13 @@
                 })
                 e.target.style.cssText = ""
 
-            },500)
+            }, 500)
 
 
-        }else{
+        } else {
 
-           var texts = document.querySelectorAll(".text-menu > span")
-            texts.forEach((val)=>{
+            var texts = document.querySelectorAll(".text-menu > span")
+            texts.forEach((val) => {
                 val.style.cssText = "-webkit-transform: translateY(-100px);\n" +
                     "        -moz-transform: translateY(-100px);\n" +
                     "        -ms-transform:translateY(-100px) ;\n" +
@@ -116,19 +125,19 @@
             })
             e.target.src = './images/menu_mobile.svg'
             e.target.style.cssText = "transform: rotate(360deg)"
-            setTimeout(()=>{
+            setTimeout(() => {
                 document.querySelector(".header").style.cssText = ""
                 document.querySelector(".mobile-menu").classList.remove('mobile-menu-show')
                 flag2 = true
                 e.target.style.cssText = ""
-            },1000)
+            }, 1000)
 
 
         }
     })
-    window.addEventListener('resize',()=>{
+    window.addEventListener('resize', () => {
         var texts = document.querySelectorAll(".text-menu> span")
-        if(document.documentElement.clientWidth>768) {
+        if (document.documentElement.clientWidth > 768) {
 
             texts.forEach((val) => {
                 val.style.cssText = "-webkit-transform: translateY(0px);\n" +
@@ -137,7 +146,7 @@
                     "        -o-transform: translateY(0px);\n" +
                     "        transform: translateY(0px);"
             })
-        }else{
+        } else {
             texts.forEach((val) => {
                 val.style.cssText = "-webkit-transform: translateY(-100px);\n" +
                     "        -moz-transform: translateY(-100px);\n" +
